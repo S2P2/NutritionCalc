@@ -22,7 +22,7 @@ st.write("TC ", int(total_cal), "TP ", round(total_protein/1000/BW,2))
 with st.beta_expander('See Detail'):
     'Total Calories'
     st.write(conc, "x ", volume_per_feed, "x ", feed_per_day, "= ", int(total_cal), "kcal" )
-    st.write(int(total_cal), "/", BW, "=", int(total_cal)/BW, "kcal/kg")
+    st.write(int(total_cal), "/", BW, "=", round(total_cal/BW, 2), "kcal/kg")
 
     'Total Protein'
     st.write(nutrition_data[nutrition_data['Name']==x].Protein.values[0],"/ 1000 kcal x ", total_cal , " = ", total_protein/1000, " g")
